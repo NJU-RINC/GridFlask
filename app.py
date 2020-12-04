@@ -15,8 +15,7 @@ socketio = SocketIO(app)
 CORS(app)
 
 app.config['SECRET_KEY'] = 'secret!'
-# app.config['UPLOAD_DIR'] = './uploads'
-print(os.environ.get('UPLOAD_DIR'))
+app.config['UPLOAD_DIR'] = './uploads'
 
 
 api.add_resource(UploadImage, '/api/upload/<string:fname>')
